@@ -1,313 +1,203 @@
-<!DOCTYPE HTML>
-<!--
-	TXT by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>TXT by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pr. Guillaume Geri — CV</title>
+<meta name="description" content="CV du Pr. Guillaume Geri, médecin réanimateur et chercheur clinicien, médecine intensive-réanimation.">
+<style>
+  :root{
+    --accent:#1f4e79;
+    --accent-light:#2f6fa8;
+    --ink:#1a1a1a;
+    --muted:#5a6672;
+    --line:#e2e6ea;
+    --bg:#f5f7f9;
+    --max:820px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;font-size:16px;
+  }
+  a{color:var(--accent-light);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 
-			<!-- Header -->
-				<header id="header">
-					<div class="logo container">
-						<div>
-							<h1><a href="index.html" id="logo">TXT</a></h1>
-							<p>A responsive site template by HTML5 UP</p>
-						</div>
-					</div>
-				</header>
+  header{
+    background:linear-gradient(135deg,var(--accent),var(--accent-light));
+    color:#fff;padding:48px 0 40px;
+  }
+  header .wrap{display:flex;flex-direction:column;gap:6px}
+  header h1{margin:0;font-size:2.1rem;font-weight:700;letter-spacing:.2px}
+  header .role{font-size:1.15rem;font-weight:500;opacity:.95}
+  header .affil{opacity:.9;font-size:.98rem;margin-top:4px}
+  .contact{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.92rem}
+  .contact span{opacity:.95}
+  .contact a{color:#fff;text-decoration:underline;text-underline-offset:2px}
 
-			<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li class="current"><a href="index.html">Home</a></li>
-						<li>
-							<a href="#">Dropdown</a>
-							<ul>
-								<li><a href="#">Lorem ipsum dolor</a></li>
-								<li><a href="#">Magna phasellus</a></li>
-								<li>
-									<a href="#">Phasellus consequat</a>
-									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Phasellus consequat</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-									</ul>
-								</li>
-								<li><a href="#">Veroeros feugiat</a></li>
-							</ul>
-						</li>
-						<li><a href="left-sidebar.html">Left Sidebar</a></li>
-						<li><a href="right-sidebar.html">Right Sidebar</a></li>
-						<li><a href="no-sidebar.html">No Sidebar</a></li>
-					</ul>
-				</nav>
+  .metrics{
+    display:flex;flex-wrap:wrap;gap:14px;margin-top:22px;
+  }
+  .metric{
+    background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
+    border-radius:10px;padding:10px 16px;min-width:110px;text-align:center;
+  }
+  .metric b{display:block;font-size:1.5rem;line-height:1.1}
+  .metric small{font-size:.78rem;opacity:.9;text-transform:uppercase;letter-spacing:.5px}
 
-			<!-- Banner -->
-				<section id="banner">
-					<div class="content">
-						<h2>Welcome to TXT by HTML5 UP</h2>
-						<p>A free responsive site template built on HTML5, CSS3, and some other stuff</p>
-						<a href="#main" class="button scrolly">Alright let's go</a>
-					</div>
-				</section>
+  main{padding:40px 0 60px}
+  section{
+    background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:24px 28px;margin-bottom:22px;
+    box-shadow:0 1px 3px rgba(20,40,60,.04);
+  }
+  section h2{
+    margin:0 0 18px;font-size:1.15rem;color:var(--accent);
+    padding-bottom:8px;border-bottom:2px solid var(--line);
+    display:flex;align-items:center;gap:10px;
+  }
+  .lead{color:var(--muted);margin:0 0 4px}
 
-			<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-12">
+  .entry{display:flex;gap:18px;padding:9px 0;border-bottom:1px dashed var(--line)}
+  .entry:last-child{border-bottom:none}
+  .entry .date{flex:0 0 92px;color:var(--accent-light);font-weight:600;font-size:.9rem;padding-top:1px}
+  .entry .body{flex:1}
+  .entry .body .t{font-weight:600}
+  .entry .body .s{color:var(--muted);font-size:.93rem}
 
-								<!-- Highlight -->
-									<section class="box highlight">
-										<ul class="special">
-											<li><a href="#" class="icon solid fa-search"><span class="label">Magnifier</span></a></li>
-											<li><a href="#" class="icon solid fa-tablet-alt"><span class="label">Tablet</span></a></li>
-											<li><a href="#" class="icon solid fa-flask"><span class="label">Flask</span></a></li>
-											<li><a href="#" class="icon solid fa-cog"><span class="label">Cog?</span></a></li>
-										</ul>
-										<header>
-											<h2>A random assortment of icons in circles</h2>
-											<p>And some text that attempts to explain their significance</p>
-										</header>
-										<p>
-											Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper mod quis eget mi. Etiam eu<br />
-											ante risus. Aliquam erat volutpat. Aliquam luctus et mattis lectus amet pulvinar. Nam nec turpis consequat.
-										</p>
-									</section>
+  ul.plain{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:.94rem}
+  ul.plain li{margin:2px 0}
 
-							</div>
-							<div class="col-12">
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:5px 14px;font-size:.9rem}
 
-								<!-- Features -->
-									<section class="box features">
-										<h2 class="major"><span>A Major Heading</span></h2>
-										<div>
-											<div class="row">
-												<div class="col-3 col-6-medium col-12-small">
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 0 40px}
 
-													<!-- Feature -->
-														<section class="box feature">
-															<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-															<h3><a href="#">A Subheading</a></h3>
-															<p>
-																Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-																lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
-															</p>
-														</section>
+  @media (max-width:560px){
+    header h1{font-size:1.65rem}
+    .entry{flex-direction:column;gap:2px}
+    .entry .date{flex-basis:auto}
+    section{padding:20px}
+  }
+  @media print{
+    body{background:#fff;font-size:12px}
+    header{background:var(--accent) !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    section{box-shadow:none;border-color:#ccc;page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
 
-												</div>
-												<div class="col-3 col-6-medium col-12-small">
+<header>
+  <div class="wrap">
+    <h1>Pr. Guillaume Geri</h1>
+    <div class="role">Professeur en Médecine Intensive – Réanimation</div>
+    <div class="affil">Médecin réanimateur &amp; co-directeur du département recherche</div>
+    <div class="contact">
+      <span>Département de soins critiques, Groupe Hospitalier Privé Ambroise Paré – Hartmann, Neuilly-sur-Seine</span>
+      <span>Affiliation INSERM U970, PARCC, Paris</span>
+      <span>✉ <a href="mailto:dr.guillaume.geri@gmail.com">dr.guillaume.geri@gmail.com</a></span>
+    </div>
+    <div class="metrics">
+      <div class="metric"><b>301</b><small>Publications</small></div>
+      <div class="metric"><b>11&nbsp;558</b><small>Citations</small></div>
+      <div class="metric"><b>56</b><small>h-index</small></div>
+    </div>
+  </div>
+</header>
 
-													<!-- Feature -->
-														<section class="box feature">
-															<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-															<h3><a href="#">Another Subheading</a></h3>
-															<p>
-																Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-																lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
-															</p>
-														</section>
+<main class="wrap">
 
-												</div>
-												<div class="col-3 col-6-medium col-12-small">
+  <section>
+    <h2>Situation actuelle</h2>
+    <p class="lead">Médecin réanimateur et co-directeur du département recherche.</p>
+    <p class="lead">Département de soins critiques, Groupe Hospitalier Privé Ambroise Paré – Hartmann,
+      48ter Boulevard Victor Hugo, 92200 Neuilly-sur-Seine, France.</p>
+    <p class="lead">Affiliation INSERM U970, PARCC, Paris, France.</p>
+  </section>
 
-													<!-- Feature -->
-														<section class="box feature">
-															<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-															<h3><a href="#">And Another</a></h3>
-															<p>
-																Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-																lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
-															</p>
-														</section>
+  <section>
+    <h2>Expérience professionnelle</h2>
+    <div class="entry"><div class="date">2019–2022</div><div class="body"><div class="t">Professeur des Universités – Praticien Hospitalier</div><div class="s">Service de médecine intensive réanimation — Hôpital Ambroise Paré &amp; Université Paris Saclay</div></div></div>
+    <div class="entry"><div class="date">2017–2019</div><div class="body"><div class="t">Maître de Conférences des Universités – Praticien Hospitalier</div><div class="s">Service de médecine intensive réanimation — Hôpital Ambroise Paré &amp; UVSQ</div></div></div>
+    <div class="entry"><div class="date">2015–2017</div><div class="body"><div class="t">Stagiaire post-doctoral</div><div class="s">Rescu — St. Michael's Hospital, Toronto, ON, Canada</div></div></div>
+    <div class="entry"><div class="date">2013–2015</div><div class="body"><div class="t">Chef de clinique – assistant</div><div class="s">Service de Réanimation Médicale — Hôpital Cochin, Paris</div></div></div>
+    <div class="entry"><div class="date">2012–2013</div><div class="body"><div class="t">Praticien hospitalier contractuel</div><div class="s">Service de Réanimation Médicale — Hôpital Cochin, Paris</div></div></div>
+  </section>
 
-												</div>
-												<div class="col-3 col-6-medium col-12-small">
+  <section>
+    <h2>Diplômes</h2>
+    <div class="entry"><div class="date">2025</div><div class="body"><div class="t">DIU Expertise Médico-Légale</div><div class="s">Sorbonne Université</div></div></div>
+    <div class="entry"><div class="date">2018</div><div class="body"><div class="t">Formation de formateur à l'enseignement par la simulation en santé</div><div class="s">Foch Santé Formation — Hôpital Foch, UVSQ</div></div></div>
+    <div class="entry"><div class="date">2017</div><div class="body"><div class="t">Habilitation à Diriger des Recherches</div><div class="s">Université de Versailles Saint-Quentin-en-Yvelines</div></div></div>
+    <div class="entry"><div class="date">2015</div><div class="body"><div class="t">Thèse d'Université en Santé Publique — spécialité Épidémiologie</div><div class="s">Faculté de Médecine, Paris V</div></div></div>
+    <div class="entry"><div class="date">2014</div><div class="body"><div class="t">DESC de Réanimation Médicale</div><div class="s">Faculté de Médecine, Paris VI</div></div></div>
+    <div class="entry"><div class="date">2013</div><div class="body"><div class="t">DU « Techniques Ultrasonores en Anesthésie-Réanimation »</div><div class="s">Faculté de Médecine, Paris V</div></div></div>
+    <div class="entry"><div class="date">2012</div><div class="body"><div class="t">Diplôme d'État de Docteur en Médecine</div><div class="s">Faculté de Médecine, Paris VI</div></div></div>
+    <div class="entry"><div class="date">2011</div><div class="body"><div class="t">DES de Médecine Interne</div><div class="s">Faculté de Médecine, Paris VI</div></div></div>
+    <div class="entry"><div class="date">2010</div><div class="body"><div class="t">Master 2 Biologie et Santé — spécialité Immunologie</div><div class="s">Faculté de Médecine, Paris XII</div></div></div>
+    <div class="entry"><div class="date">2006</div><div class="body"><div class="t">Examen National Classant</div><div class="s">Faculté de Médecine, Nantes</div></div></div>
+    <div class="entry"><div class="date">2000–2006</div><div class="body"><div class="t">1er &amp; 2e cycles des études médicales</div><div class="s">Faculté de Médecine, Nantes</div></div></div>
+  </section>
 
-													<!-- Feature -->
-														<section class="box feature">
-															<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-															<h3><a href="#">And One More</a></h3>
-															<p>
-																Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-																lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
-															</p>
-														</section>
+  <section>
+    <h2>Prix et distinctions</h2>
+    <div class="entry"><div class="date">2017</div><div class="body"><div class="t">Critical Care Scholarship</div><div class="s">American Thoracic Society</div></div></div>
+    <div class="entry"><div class="date">2016</div><div class="body"><div class="t">Prix Jeune Chercheur</div><div class="s">Fondation Bettencourt-Schueller — 25 000 €</div></div></div>
+    <div class="entry"><div class="date">2015</div><div class="body"><div class="t">Fonds d'Études et de Recherche du Corps Médical</div><div class="s">Assistance Publique – Hôpitaux de Paris — 15 000 €</div></div></div>
+    <div class="entry"><div class="date">2015</div><div class="body"><div class="t">Bourse Mobilité</div><div class="s">Société de Réanimation de Langue Française — 15 000 €</div></div></div>
+    <div class="entry"><div class="date">2013</div><div class="body"><div class="t">Young Investigator Award</div><div class="s">American Heart Association</div></div></div>
+  </section>
 
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><a href="#" class="button large">Do Something</a></li>
-														<li><a href="#" class="button alt large">Think About It</a></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</section>
+  <section>
+    <h2>Financements académiques (investigateur principal)</h2>
+    <div class="entry"><div class="date">2019</div><div class="body"><div class="t">HYVAPRESS — Hydrocortisone and vasopressin in post-cardiac-arrest shock</div><div class="s">PHRC national</div></div></div>
+    <div class="entry"><div class="date">2016</div><div class="body"><div class="t">Score PREDICT — prédiction de la maladie rénale chronique après insuffisance rénale aiguë en réanimation</div><div class="s">PHRC inter-régional (AOR16089)</div></div></div>
+  </section>
 
-							</div>
-							<div class="col-12">
+  <section>
+    <h2>Implication académique et scientifique</h2>
+    <div class="entry"><div class="date">2017–</div><div class="body"><div class="t">Systematic reviewer — ILCOR</div><div class="s">International Liaison Committee On Resuscitation</div></div></div>
+    <div class="entry"><div class="date">2015–</div><div class="body"><div class="t">Relecteur pour les revues médicales</div>
+      <ul class="plain">
+        <li>Circulation &amp; Circulation: Cardiovascular Quality and Outcomes</li>
+        <li>Intensive Care Medicine</li>
+        <li>Annals of Intensive Care</li>
+        <li>Critical Care Medicine</li>
+      </ul>
+    </div></div>
+  </section>
 
-								<!-- Blog -->
-									<section class="box blog">
-										<h2 class="major"><span>Another Major Heading</span></h2>
-										<div>
-											<div class="row">
-												<div class="col-9 col-12-medium">
-													<div class="content">
+  <section>
+    <h2>Encadrement de travaux de recherche</h2>
+    <div class="entry"><div class="date">2025–</div><div class="body"><div class="t">Thèse de 3e cycle en Santé Publique (Épidémiologie) — Dr Vincent Pham</div><div class="s">INSERM U970, PARCC — École Doctorale de Santé Publique</div></div></div>
+    <div class="entry"><div class="date">2018–2021</div><div class="body"><div class="t">Thèse de 3e cycle en Santé Publique (Épidémiologie) — Dr Matthieu Jamme</div><div class="s">INSERM UMR 1018, CESP</div></div></div>
+    <div class="entry"><div class="date">2017–2020</div><div class="body"><div class="t">Thèse de 3e cycle en Santé Publique (Épidémiologie) — Dr Anne-Laure Faucon</div><div class="s">INSERM UMR 1018, CESP</div></div></div>
+    <div class="entry"><div class="date">2022–2023</div><div class="body"><div class="t">Master 2 Recherche Physiologie — Dr Antoine Bois</div><div class="s">École Vétérinaire de Maisons-Alfort</div></div></div>
+    <div class="entry"><div class="date">2020–2021</div><div class="body"><div class="t">Master 2 Recherche Bioinformatique — Dr Anousone Daulasim</div><div class="s">INSERM UMR 1018, CESP</div></div></div>
+    <div class="entry"><div class="date">2013–2025</div><div class="body"><div class="t">Encadrement de thèses d'exercice</div><div class="s">Dr O. Passouant, L. Guillemet, A. Prigent, A. Bois, C. Wirth, N. Flajoliet, F. Djallali</div></div></div>
+  </section>
 
-														<!-- Featured Post -->
-															<article class="box post">
-																<header>
-																	<h3><a href="#">Here's a really big heading</a></h3>
-																	<p>With a smaller subtitle that attempts to elaborate</p>
-																	<ul class="meta">
-																		<li class="icon fa-clock">15 minutes ago</li>
-																		<li class="icon fa-comments"><a href="#">8</a></li>
-																	</ul>
-																</header>
-																<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-																<p>
-																	Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in lectus. Praesent
-																	semper mod quis eget mi. Etiam sed ante risus aliquam erat et volutpat. Praesent a
-																	dapibus velit. Curabitur sed nisi nunc, accumsan vestibulum lectus. Lorem ipsum
-																	dolor sit non aliquet sed, tempor et dolor. Praesent a dapibus velit. Curabitur
-																	accumsan.
-																</p>
-																<a href="#" class="button">Continue Reading</a>
-															</article>
+  <section>
+    <h2>Sociétés savantes</h2>
+    <div class="tags">
+      <span class="tag">Société de Réanimation de Langue Française — Membre</span>
+      <span class="tag">American Heart Association — Early Career</span>
+      <span class="tag">European Society of Intensive Care Medicine — Junior</span>
+    </div>
+  </section>
 
-													</div>
-												</div>
-												<div class="col-3 col-12-medium">
-													<div class="sidebar">
+</main>
 
-														<!-- Archives -->
-															<ul class="divided">
-																<li>
-																	<article class="box post-summary">
-																		<h3><a href="#">A Subheading</a></h3>
-																		<ul class="meta">
-																			<li class="icon fa-clock">6 hours ago</li>
-																			<li class="icon fa-comments"><a href="#">34</a></li>
-																		</ul>
-																	</article>
-																</li>
-																<li>
-																	<article class="box post-summary">
-																		<h3><a href="#">Another Subheading</a></h3>
-																		<ul class="meta">
-																			<li class="icon fa-clock">9 hours ago</li>
-																			<li class="icon fa-comments"><a href="#">27</a></li>
-																		</ul>
-																	</article>
-																</li>
-																<li>
-																	<article class="box post-summary">
-																		<h3><a href="#">And Another</a></h3>
-																		<ul class="meta">
-																			<li class="icon fa-clock">Yesterday</li>
-																			<li class="icon fa-comments"><a href="#">184</a></li>
-																		</ul>
-																	</article>
-																</li>
-																<li>
-																	<article class="box post-summary">
-																		<h3><a href="#">And Another</a></h3>
-																		<ul class="meta">
-																			<li class="icon fa-clock">2 days ago</li>
-																			<li class="icon fa-comments"><a href="#">286</a></li>
-																		</ul>
-																	</article>
-																</li>
-																<li>
-																	<article class="box post-summary">
-																		<h3><a href="#">And One More</a></h3>
-																		<ul class="meta">
-																			<li class="icon fa-clock">3 days ago</li>
-																			<li class="icon fa-comments"><a href="#">8,086</a></li>
-																		</ul>
-																	</article>
-																</li>
-															</ul>
-															<a href="#" class="button alt">Archives</a>
+<footer>
+  <div class="wrap">
+    Numéro RPPS : 10100385946 · Ordre des Médecins : 25025/92<br>
+    Dernière mise à jour : juillet 2026
+  </div>
+</footer>
 
-													</div>
-												</div>
-											</div>
-										</div>
-									</section>
-
-							</div>
-						</div>
-					</div>
-				</section>
-
-			<!-- Footer -->
-				<footer id="footer">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-12">
-
-								<!-- About -->
-									<section>
-										<h2 class="major"><span>What's this about?</span></h2>
-										<p>
-											This is <strong>TXT</strong>, yet another free responsive site template designed by
-											<a href="http://twitter.com/ajlkn">AJ</a> for <a href="http://html5up.net">HTML5 UP</a>. It's released under the
-											<a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for
-											whatever you're working on (personal or commercial), just be sure to give us credit for the design.
-											That's basically it :)
-										</p>
-									</section>
-
-							</div>
-							<div class="col-12">
-
-								<!-- Contact -->
-									<section>
-										<h2 class="major"><span>Get in touch</span></h2>
-										<ul class="contact">
-											<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
-											<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-											<li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-											<li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
-											<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
-										</ul>
-									</section>
-
-							</div>
-						</div>
-
-						<!-- Copyright -->
-							<div id="copyright">
-								<ul class="menu">
-									<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-								</ul>
-							</div>
-
-					</div>
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
